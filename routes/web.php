@@ -5,3 +5,7 @@ use App\Models\Book;
 use Illuminate\Support\Facades\Route;
 
 Route::resource('books', BookController::class);
+
+Route::get('/', function(){
+    return 'Homepage';
+});

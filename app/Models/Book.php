@@ -19,7 +19,7 @@ class Book extends Model
 
     public function scopeTitle(Builder $query, string $title): Builder|QueryBuilder
     {
-        return $query->where("title", "LIKE", "%" . $title . "%");
+        return $query->where("title", "LIKE", "% " . $title . " %");
     }
 
     public function scopePopular(Builder $query, $from = null, $to = null): Builder|QueryBuilder
